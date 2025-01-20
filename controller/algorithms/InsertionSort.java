@@ -4,13 +4,9 @@ import javax.swing.table.DefaultTableModel;
 
 public class InsertionSort {
 
-    /**
-     * Sorts a JTable model by the Customer Name column in ascending or descending order.
-     *
-     * @param model the table model to sort
-     * @param columnIndex the index of the Customer Name column
-     * @param isDesc specifies the sorting order (true for descending, false for ascending)
-     */
+    // Sorts a JTable model by the Customer Name column in ascending or descending order.
+
+    
     public void sortByCustomerName(DefaultTableModel model, int columnIndex, boolean isDesc) {
         int rowCount = model.getRowCount();
 

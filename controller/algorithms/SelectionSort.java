@@ -4,13 +4,8 @@ import javax.swing.table.DefaultTableModel;
 
 public class SelectionSort {
 
-    /**
-     * Sorts a JTable model by the Product ID column in ascending or descending order.
-     *
-     * @param model the table model to sort
-     * @param columnIndex the index of the Product ID column
-     * @param isDesc specifies the sorting order (true for descending, false for ascending)
-     */
+    // Sorts a JTable model by the Product ID column in ascending or descending order.
+   
     public void sortByProductId(DefaultTableModel model, int columnIndex, boolean isDesc) {
         int rowCount = model.getRowCount();
 
@@ -34,10 +29,7 @@ public class SelectionSort {
 
     /**
      * Swaps two rows in the table model.
-     *
-     * @param model the table model
-     * @param row1 the first row index
-     * @param row2 the second row index
+   
      */
     private void swapRows(DefaultTableModel model, int row1, int row2) {
         int columnCount = model.getColumnCount();

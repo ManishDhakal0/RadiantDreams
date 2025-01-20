@@ -6,7 +6,7 @@
 
 /**
  *
- * @author llll
+ * @author Manish Dhakal
  */
 
     
@@ -17,14 +17,9 @@ import javax.swing.table.DefaultTableModel;
 
 public class BinarySearch {
 
-    /**
-     * Performs binary search on a DefaultTableModel by a specific column.
-     *
-     * @param model the table model to search
-     * @param searchName the name to search for
-     * @param columnIndex the index of the column to search
-     * @return the index of the matching row, or -1 if not found
-     */
+    
+     //Performs binary search on a DefaultTableModel by a specific column.
+   
     public int search(DefaultTableModel model, String searchName, int columnIndex) {
         int low = 0;
         int high = model.getRowCount() - 1;

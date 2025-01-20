@@ -12,9 +12,7 @@ public class ValidationUtil {
 
     /**
      * Validates if a string is null or empty.
-     *
-     * @param value the string to validate
-     * @return true if the string is null or empty, otherwise false
+  
      */
     public static boolean isNullOrEmpty(String value) {
         return value == null || value.trim().isEmpty();
@@ -22,9 +20,7 @@ public class ValidationUtil {
 
     /**
      * Validates if the product ID is exactly 4 digits starting with 1.
-     *
-     * @param productId the product ID to validate
-     * @return true if valid, otherwise false
+    
      */
     public static boolean isValidProductId(String productId) {
         return !isNullOrEmpty(productId) && PRODUCT_ID_PATTERN.matcher(productId).matches();
@@ -32,9 +28,7 @@ public class ValidationUtil {
 
     /**
      * Validates if the customer name contains only alphabets and spaces.
-     *
-     * @param customerName the name to validate
-     * @return true if valid, otherwise false
+   
      */
     public static boolean isValidCustomerName(String customerName) {
         return !isNullOrEmpty(customerName) && NAME_PATTERN.matcher(customerName).matches();
@@ -42,9 +36,6 @@ public class ValidationUtil {
 
     /**
      * Validates if the address contains only alphabets and spaces.
-     *
-     * @param address the address to validate
-     * @return true if valid, otherwise false
      */
     public static boolean isValidAddress(String address) {
         return !isNullOrEmpty(address) && ADDRESS_PATTERN.matcher(address).matches();
@@ -52,9 +43,7 @@ public class ValidationUtil {
 
     /**
      * Validates if the quantity is between 1 and 20 (inclusive).
-     *
-     * @param quantity the quantity to validate
-     * @return true if valid, otherwise false
+     
      */
     public static boolean isValidQuantity(String quantity) {
         try {
@@ -67,9 +56,7 @@ public class ValidationUtil {
 
     /**
      * Validates if the contact number starts with 98 and has 10 digits in total.
-     *
-     * @param contact the contact number to validate
-     * @return true if valid, otherwise false
+   
      */
     public static boolean isValidContact(String contact) {
         return !isNullOrEmpty(contact) && CONTACT_PATTERN.matcher(contact).matches();
@@ -77,10 +64,7 @@ public class ValidationUtil {
 
     /**
      * Validates if a field satisfies both non-empty and specific criteria.
-     *
-     * @param value      the field value to validate
-     * @param isCriteria the specific criteria to validate against
-     * @return true if both non-empty and criteria validation pass, otherwise false
+
      */
     public static boolean validateField(String value, boolean isCriteria) {
         return !isNullOrEmpty(value) && isCriteria;

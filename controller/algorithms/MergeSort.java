@@ -6,13 +6,8 @@ import java.util.List;
 
 public class MergeSort {
 
-    /**
-     * Sorts a JTable model by the Customer Address column using merge sort.
-     *
-     * @param model the table model to sort
-     * @param columnIndex the index of the Customer Address column
-     * @param isDesc specifies the sorting order (true for descending, false for ascending)
-     */
+     //Sorts a JTable model by the Customer Address column using merge sort.
+   
     public void sortByCustomerAddress(DefaultTableModel model, int columnIndex, boolean isDesc) {
         int rowCount = model.getRowCount();
         List<Object[]> rows = new ArrayList<>();
@@ -25,7 +20,6 @@ public class MergeSort {
             }
             rows.add(row);
         }
-
         // Sort the rows using merge sort
         List<Object[]> sortedRows = mergeSort(rows, columnIndex, isDesc);
 
@@ -37,19 +31,16 @@ public class MergeSort {
             }
         }
     }
-
     private List<Object[]> mergeSort(List<Object[]> rows, int columnIndex, boolean isDesc) {
         if (rows.size() <= 1) {
             return rows;
         }
-
         int mid = rows.size() / 2;
         List<Object[]> left = mergeSort(rows.subList(0, mid), columnIndex, isDesc);
         List<Object[]> right = mergeSort(rows.subList(mid, rows.size()), columnIndex, isDesc);
 
         return merge(left, right, columnIndex, isDesc);
     }
-
     private List<Object[]> merge(List<Object[]> left, List<Object[]> right, int columnIndex, boolean isDesc) {
         List<Object[]> merged = new ArrayList<>();
         int i = 0, j = 0;
@@ -65,15 +56,12 @@ public class MergeSort {
                 merged.add(right.get(j++));
             }
         }
-
         while (i < left.size()) {
             merged.add(left.get(i++));
         }
-
         while (j < right.size()) {
             merged.add(right.get(j++));
         }
-
         return merged;
     }
 }

@@ -1,64 +1,89 @@
 package com.mattressapp.model;
 
 /**
- *
+ * Represents a mattress and customer details in the application.
+ * 
  * @author 23048585ManishDhakal
  */
 public class MattressModel {
-    private int lmuId;
-    private String name;
-    private String program;
-    private String contact;
-    private short age;
+    private int productId;
+    private String customerName;
+    private String customerPhone;
+    private String customerAddress;
+    private short quantity;
+    private String productName;
+    private int productPrice;
 
+    // Default constructor
     public MattressModel() {
     }
 
-    public MattressModel(int lmuId, String name, String program, String contact, short age) {
-        this.lmuId = lmuId;
-        this.name = name;
-        this.program = program;
-        this.contact = contact;
-        this.age = age;
-    }
-    
-    public int getLmuId() {
-        return lmuId;
-    }
-
-    public void setLmuId(int lmuId) {
-        this.lmuId = lmuId;
+    // Parameterized constructor
+    public MattressModel(int productId, String customerName, String customerPhone, String customerAddress,
+            short quantity, String productName, int productPrice) {
+        this.productId = productId;
+        this.customerName = customerName;
+        this.customerPhone = customerPhone;
+        this.customerAddress = customerAddress;
+        this.quantity = quantity;
+        this.productName = productName;
+        this.productPrice = productPrice;
     }
 
-    public String getName() {
-        return name;
+    // Getters and setters
+    public int getProductId() {
+        return productId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
-    public String getProgram() {
-        return program;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setProgram(String program) {
-        this.program = program;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
-    public String getContact() {
-        return contact;
+    public String getCustomerPhone() {
+        return customerPhone;
     }
 
-    public void setContact(String contact) {
-        this.contact = contact;
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
     }
 
-    public short getAge() {
-        return age;
+    public String getCustomerAddress() {
+        return customerAddress;
     }
 
-    public void setAge(short age) {
-        this.age = age;
-    }    
+    public void setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
+    }
+
+    public short getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(short quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public int getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(int productPrice) {
+        this.productPrice = productPrice;
+    }
 }
